@@ -199,7 +199,7 @@ environment.loaders.append('expose', {
 
 module.exports = environment
 ```
-## 12. Stimulas is installed and running now let's add flatpickr
+## 12. Stimulas is up and running - let's add flatpickr now
 ```console
 $ yarn add stimulus-flatpickr flatpickr
 ```
