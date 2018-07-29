@@ -1,4 +1,4 @@
-# Boots - Rails + webpacker + bootstrap + stimulus + flatpickr
+# Flatpickr-Demo - Rails + webpacker + bootstrap + stimulus + flatpickr
 Steps to create a rails app based on Ruby 2.5.1, Rails 5.2.0, Webpacker, Bootstrap, Stimulus and Flatpickr
 
 Based on https://andyyou.github.io/2018/05/02/rails-5-webpacker-stimulus-bootstrap-starter/
@@ -208,7 +208,7 @@ If you only need to convert an input field in a DateTime picker, you just need t
 
 Register a Flatpickr Controller
 
-manually register a new stimulus controller in your main js entry point:
+manually register a new stimulus controller in your main js entry point in app/javascript/packs/application.js:
 ```js
 /* eslint no-console:0 */
 // This file is automatically compiled by Webpack, along with any other files
