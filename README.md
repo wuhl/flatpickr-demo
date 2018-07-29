@@ -326,7 +326,7 @@ application.load(definitionsFromContext(context));
 ```
 ## 17. Start rails and see...
 ```console
-$ yarn add stimulus-flatpickr flatpickr
+$ rails s
 ```
 
 ```console
