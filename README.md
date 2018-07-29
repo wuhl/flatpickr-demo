@@ -284,7 +284,8 @@ export default class extends Flatpickr {
   initialize() {
     // sets your language (you can also set some global setting for all time pickers)
     this.config = {
-      locale: German
+      locale: German,
+      dateFormat: "d.m.Y"
     };
   }
 
