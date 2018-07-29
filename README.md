@@ -206,7 +206,7 @@ $ yarn add stimulus-flatpickr flatpickr
 ## 13. Basic usage
 If you only need to convert an input field in a DateTime picker, you just need to register a standard Stimulus controller and add some markup to your input field.
 
-Register a Flatpickr Controller
+### Register a Flatpickr Controller
 
 manually register a new stimulus controller in your main js entry point in app/javascript/packs/application.js:
 ```js
@@ -265,7 +265,7 @@ create customs callbacks
 perform JS business logic
 Skip basics installation steps from above!
 
-Extends the controller
+### Extends the controller
 
 create a new Stimulus controller that will inherit from stimulus-flatpickr
 ```js
