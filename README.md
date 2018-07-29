@@ -48,7 +48,7 @@ h1 {
 // app/javascript/packs/application.js
 import 'stylesheets/application'
 ```
-## 5. Add 1. Stimulus controller root
+## 4. Add 1. Stimulus controller root
 ```js
 // app/javascript/controllers/clipboard_controller.js
 import { Controller } from 'stimulus'
@@ -70,7 +70,7 @@ export default class extends Controller {
   }
 }
 ```
-## 6. Create Controller with first page
+## 5. Create Controller with first page
 ```console
 $ rails g controller pages example
 ...
@@ -87,7 +87,7 @@ $ rails g controller pages example
   </button>
 </div>
 ```
-## 7. Add pack to layout
+## 6. Add pack to layout
 ```erb
 <%# /app/views/layout/application.html.erb %>
 <!DOCTYPE html>
@@ -106,7 +106,7 @@ $ rails g controller pages example
   </body>
 </html>
 ```
-## 8. Add route
+## 7. Add route
 ```ruby
 # config/routes.rb
 # tip: at the top to be matched first
@@ -115,24 +115,24 @@ Rails.application.routes.draw do
   root to: 'pages#example'
 end
 ```
-## 9. Install bootstrap 
+## 8. Install bootstrap 
 ```console
 $ yarn add jquery popper.js bootstrap
 ...
 ```
-## 8. Import bootstrap stylesheets
+## 9. Import bootstrap stylesheets
 ```scss
 // app/javascript/stylesheets/application.scss
 @import '~bootstrap/scss/bootstrap';
 @import 'variables';
 @import 'base';
 ```
-## 9. Import bootstrap javascript
+## 10. Import bootstrap javascript
 ```js
 // app/javascript/packs/application.js
 import 'bootstrap'
 ```
-## 10. Configure webpacker
+## 11. Configure webpacker
 Add configuration to config/webpack/environment.js. If you do not setup this step, the abilities related to Popper.js such as tooltip will not working.
 ```js
 // config/webpack/environment.js
@@ -157,10 +157,9 @@ environment.plugins.prepend(
 )
 module.exports = environment
 ```
-## 11. Expose jQuery to global views
-Sometimes you may like to use jQuery in views you should expose jQuery to global.
+## 12. Expose jQuery to global views
+Sometimes you may like to use jQuery in views you should expose jQuery to global, based on # https://webpack.js.org/loaders/expose-loader/
 ```console
-# https://webpack.js.org/loaders/expose-loader/
 $ yarn add expose-loader -D
 ```
 Add configuration to config/webpack/environment.js
@@ -199,11 +198,11 @@ environment.loaders.append('expose', {
 
 module.exports = environment
 ```
-## 12. Stimulas is up and running - let's add flatpickr now
+## 13. Stimulas is up and running - let's add flatpickr now
 ```console
 $ yarn add stimulus-flatpickr flatpickr
 ```
-## 13. Basic usage
+## 14. Basic usage
 If you only need to convert an input field in a DateTime picker, you just need to register a standard Stimulus controller and add some markup to your input field.
 
 ### Register a Flatpickr Controller
@@ -324,4 +323,12 @@ application.load(definitionsFromContext(context));
 
 // Manually register Flatpickr as a stimulus controller
 //application.register("flatpickr", Flatpickr);
+```
+## 17. Start rails and see...
+```console
+$ yarn add stimulus-flatpickr flatpickr
+```
+
+```console
+localhost:3000
 ```
