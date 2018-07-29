@@ -1,0 +1,19 @@
+<h1>Hello, World</h1>
+<hr>
+<div data-controller="clipboard members dashboard">
+  PIN
+  <input type="text" data-target="clipboard.source" value="1234" readonly>
+  <button data-action="clipboard#copy" class="clipboard-button">
+    Copy to Clipboard
+  </button>
+</div>
+
+<%= form_tag(root_path, method: :get) do %>
+  <%= text_field :start_time, params[:start_time], 
+    data: {
+      controller: "flatpickr",
+      flatpickr_enable_time: false,
+      flatpickr_max_date: Time.zone.now + 3.days
+    } %>
+    <%= submit_tag 'Search' %>
+<% end %>
